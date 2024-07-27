@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main.UI.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -31,7 +31,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnDepartament"
         app:layout_constraintEnd_toStartOf="@+id/btnProfessor"
-        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintHorizontal_bias="0.881"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.294" />
@@ -40,6 +40,7 @@
         android:id="@+id/btnAllocation"
         android:layout_width="158dp"
         android:layout_height="71dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="148dp"
         android:background="@drawable/square_button"
@@ -47,12 +48,14 @@
         android:text="Allocation"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnProfessor" />
 
     <Button
         android:id="@+id/btnDepartament"
         android:layout_width="158dp"
         android:layout_height="71dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="148dp"
         android:background="@drawable/square_button"
         android:backgroundTint="#041366"
@@ -61,7 +64,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAllocation"
         app:layout_constraintHorizontal_bias="0.881"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCourse" />
 
     <Button
         android:id="@+id/btnProfessor"
