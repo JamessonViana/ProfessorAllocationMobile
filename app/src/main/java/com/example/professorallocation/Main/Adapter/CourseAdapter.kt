@@ -35,6 +35,6 @@ class CourseAdapter(
     class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val courseName: TextView = itemView.findViewById(R.id.courseName)
         val btnEdit: Button = itemView.findViewById(R.id.btnEdit)
-        val btnDelete: Button = itemView.findViewById(R.id.btnDelete)
+        val btnDelete: Button = itemView.findViewById(R.id.btnNewCourse)
     }
 }

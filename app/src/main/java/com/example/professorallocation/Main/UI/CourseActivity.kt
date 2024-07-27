@@ -1,12 +1,13 @@
 package com.example.professorallocation.Main.UI
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.professorallocation.Main.Adapter.CourseAdapter
-import com.example.professorallocation.Main.Models.Course
 import com.example.professorallocation.Main.Repository.CourseRepository
 import com.example.professorallocation.Main.Service.CourseService
 import com.example.professorallocation.R
@@ -28,7 +29,19 @@ class CourseActivity : AppCompatActivity() {
         repository = CourseRepository(courseService)
 
         buscarCursos()
+
+        val newCourse = findViewById<Button>(R.id.newCourse)
+        newCourse.setOnClickListener {
+            val intent = Intent(this , CreateCourseActivity :: class.java)
+            startActivity(intent)
+        }  
+
+
     }
+
+
+
+
 
     private fun buscarCursos() {
         repository.buscarCursos(
@@ -53,4 +66,7 @@ class CourseActivity : AppCompatActivity() {
             }
         )
     }
+
+
+
 }

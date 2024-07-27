@@ -24,7 +24,7 @@
         app:iconGravity="textStart" />
 
     <Button
-        android:id="@+id/btnDelete"
+        android:id="@+id/btnNewCourse"
         android:layout_width="68dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#F80F0F"
