@@ -8,13 +8,46 @@
     android:scrollbarSize="4dp"
     tools:context=".Main.UI.CourseActivity">
 
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="338dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#12E00B"
+        app:icon="@drawable/add"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/courseList"
-        android:layout_width="410dp"
-        android:layout_height="625dp"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="45dp"
+        android:layout_width="421dp"
+        android:layout_height="523dp"
+        android:layout_marginBottom="84dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDelete"
         tools:ignore="MissingConstraints"
-        tools:listitem="@layout/listdefault"
-        />
+        tools:layout_editor_absoluteX="-5dp"
+        tools:listitem="@layout/listdefault" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="407dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="1dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/courseList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:title="Course"
+        app:titleTextColor="#F6F3F3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
