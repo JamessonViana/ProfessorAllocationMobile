@@ -19,7 +19,7 @@ interface ProfessorService {
     fun postProfessor(@Body curso: Professor) : Call<Any>
 
     @GET("professor/{id}")
-    fun getProfessor(@Path("id") cursoId: Int) : Call<Professor>
+    fun getProfessorPorId(@Path("id") cursoId: Int) : Call<Professor>
 
     @PUT("professor/{id}")
     fun putProfessor(@Path("id") cursoId: Int, @Body curso: Professor) : Call<Professor>
