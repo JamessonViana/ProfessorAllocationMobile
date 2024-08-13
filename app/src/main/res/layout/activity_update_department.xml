@@ -5,22 +5,34 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbarSize="4dp"
-    tools:context=".Main.UI.DepartmentActivity">
+    tools:context=".Main.UI.UpdateDeparmentActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/departmentList"
-        android:layout_width="415dp"
-        android:layout_height="523dp"
-        android:layout_marginBottom="50dp"
+    <ImageButton
+        android:id="@+id/btnUpdateDeparment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="532dp"
+        android:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDepartmento"
+        app:layout_constraintVertical_bias="0.312"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
+    <EditText
+        android:id="@+id/editDepartmento"
+        android:layout_width="386dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints"
-        tools:listitem="@layout/listdefault" />
+        app:layout_constraintVertical_bias="0.012" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -37,22 +49,4 @@
         app:title="Department"
         app:titleTextColor="#F6F3F3"
         tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/newDepartment"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="279dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#35FF3D"
-        android:text=""
-        app:icon="@drawable/add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/departmentList"
-        app:layout_constraintVertical_bias="1.0" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

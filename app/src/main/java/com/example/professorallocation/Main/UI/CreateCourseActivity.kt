@@ -35,9 +35,8 @@ class CreateCourseActivity : AppCompatActivity() {
             val courseName = edtCourseName.text.toString()
             if (courseName.isNotEmpty()) {
                 val novoCurso = Course(
-                    id = 0, // ou o valor apropriado se não for gerado automaticamente
+                    id = 0,
                     name = courseName
-                    // outros atributos necessários
                 )
 
                 repository.criarCurso(
@@ -50,7 +49,6 @@ class CreateCourseActivity : AppCompatActivity() {
                         menuCourse.setOnClickListener {
                             val intent = Intent(this , CourseActivity :: class.java)
                             startActivity(intent)
-
                         }
 
                     },

@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -34,13 +36,12 @@ class CourseActivity : AppCompatActivity() {
         newCourse.setOnClickListener {
             val intent = Intent(this , CreateCourseActivity :: class.java)
             startActivity(intent)
-        }  
+        }
+
+
 
 
     }
-
-
-
 
 
     private fun buscarCursos() {
@@ -49,23 +50,49 @@ class CourseActivity : AppCompatActivity() {
                 if (cursos != null) {
                     val adapter = CourseAdapter(cursos,
                         onEditClick = { course ->
-                            // Lógica para editar o curso
+
+                            val intent = Intent(this, UpdateCourseActivity::class.java)
+                            intent.putExtra("Course_id", course.id)
+                            intent.putExtra("Course_name", course.name)
+                            startActivity(intent)
+
                         },
                         onDeleteClick = { course ->
-                            // Lógica para excluir o curso
+
+
+                            repository.apagarCurso(
+                                idCurso = course.id,
+                                onCall = { code ->
+                                  if(code == 204)
+                                    Toast.makeText(this, "Curso excluído com sucesso!", Toast.LENGTH_SHORT).show()
+                                  else
+                                    Toast.makeText(this, "Não foi possível excluir curso!", Toast.LENGTH_SHORT).show()
+
+                                },
+                                onError = { mensagem ->
+                                    Toast.makeText(this, "Erro ao excluir curso: $mensagem", Toast.LENGTH_SHORT).show()
+                                }
+                            )
+
+                            buscarCursos()
                         }
+
                     )
                     recyclerView.adapter = adapter
                 } else {
-                    // Exibir mensagem ou tratar caso de lista vazia
+                    Toast.makeText(this, "A lista de cursos está vazia!", Toast.LENGTH_SHORT).show()
                 }
             },
             onError = {
-                Log.e("CourseActivity", "Erro ao buscar cursos")
-                // Tratar o erro
+                Log.e("CourseActivity", "Erro ao buscar cursos!")
+
             }
         )
     }
+
+
+
+
 
 
 

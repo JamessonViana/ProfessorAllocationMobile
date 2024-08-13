@@ -17,7 +17,19 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Main.UI.URDProfessor"
+            android:exported="false" />
+        <activity
+            android:name=".Main.UI.URDAllocation"
+            android:exported="false" />
+        <activity
+            android:name=".Main.UI.UpdateCourseActivity"
+            android:exported="false" />
+        <activity
             android:name=".Main.UI.CreateCourseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Main.UI.CreateProfessorActivity"
             android:exported="false" />
         <activity
             android:name=".Main.UI.AllocationActivity"
@@ -32,6 +44,12 @@
             android:name=".Main.UI.CourseActivity"
             android:exported="false"
             android:theme="@style/Theme.ProfessorAllocation" />
+        <activity
+            android:name=".Main.UI.UpdateDeparmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Main.UI.CreateDepartmentActivity"
+            android:exported="false" />
         <activity
             android:name=".Main.UI.MainActivity"
             android:exported="true">

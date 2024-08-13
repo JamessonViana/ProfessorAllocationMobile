@@ -80,12 +80,12 @@ class CourseRepository(val servico: CourseService) {
 
     fun apagarCurso(
         idCurso: Int,
-        onCall: () -> Unit,
+        onCall: (code: Int) -> Unit,
         onError: (mensagem: String) -> Unit
     ){
         servico.deleteCurso(idCurso).enqueue(object : Callback<Any> {
             override fun onResponse(p0: Call<Any>, p1: Response<Any>) {
-                onCall()
+              onCall(p1.code())
             }
 
             override fun onFailure(p0: Call<Any>, p1: Throwable) {

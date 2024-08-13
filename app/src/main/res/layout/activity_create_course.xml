@@ -30,6 +30,7 @@
         android:ems="10"
         android:hint="Informe o nome do curso"
         android:inputType="text"
+        android:maxLength="15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"

@@ -12,20 +12,20 @@ import retrofit2.http.Path
 
 interface ProfessorService {
 
-    @GET("professor")
+    @GET("professors")
     fun getProfessor() : Call<List<Professor>>
 
-    @POST("professor")
-    fun postProfessor(@Body curso: Professor) : Call<Any>
+    @POST("professors")
+    fun postProfessor(@Body professor: Professor) : Call<Any>
 
-    @GET("professor/{id}")
-    fun getProfessorPorId(@Path("id") cursoId: Int) : Call<Professor>
+    @GET("professors/{id}")
+    fun getProfessorPorId(@Path("id") professorId: Int) : Call<Professor>
 
-    @PUT("professor/{id}")
-    fun putProfessor(@Path("id") cursoId: Int, @Body curso: Professor) : Call<Professor>
+    @PUT("professors/{id}")
+    fun putProfessor(@Path("id") professorId: Int, @Body professor: Professor) : Call<Professor>
 
-    @DELETE("professor/{id}")
-    fun deleteProfessor(@Path("id") cursoId: Int) : Call<Any>
+    @DELETE("professors/{id}")
+    fun deleteProfessor(@Path("id") professorId: Int) : Call<Any>
 
     companion object {
         fun create(): ProfessorService {

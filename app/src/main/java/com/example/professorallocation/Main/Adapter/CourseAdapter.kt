@@ -33,8 +33,8 @@ class CourseAdapter(
     override fun getItemCount(): Int = courses.size
 
     class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val courseName: TextView = itemView.findViewById(R.id.courseName)
-        val btnEdit: Button = itemView.findViewById(R.id.btnEdit)
-        val btnDelete: Button = itemView.findViewById(R.id.btnNewCourse)
+        val courseName: TextView = itemView.findViewById(R.id.ItemName)
+        val btnEdit: Button = itemView.findViewById(R.id.btnEditProf)
+        val btnDelete: Button = itemView.findViewById(R.id.btnNewItem)
     }
 }
