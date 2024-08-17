@@ -131,11 +131,9 @@ class URDProfessor : AppCompatActivity() {
                     onCall = {
                         Toast.makeText(this, "Professor criado com sucesso!", Toast.LENGTH_SHORT).show()
 
-                        val menuProfessor = findViewById<Button>(R.id.btnDepartament)
-                        menuProfessor.setOnClickListener {
                             val intent = Intent(this, ProfessorActivity::class.java)
                             startActivity(intent)
-                        }
+
                     },
                     onError = {
                         Toast.makeText(this, "Erro ao criar professor!", Toast.LENGTH_SHORT).show()

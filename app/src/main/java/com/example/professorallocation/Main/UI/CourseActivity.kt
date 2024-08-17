@@ -74,7 +74,8 @@ class CourseActivity : AppCompatActivity() {
                                 }
                             )
 
-                            buscarCursos()
+                            val intent = Intent(this , CourseActivity :: class.java)
+                            startActivity(intent)
                         }
 
                     )

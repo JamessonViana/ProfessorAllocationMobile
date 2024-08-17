@@ -49,11 +49,8 @@ class UpdateCourseActivity : AppCompatActivity() {
 
                         Toast.makeText(this, "Curso alterado com sucesso!", Toast.LENGTH_SHORT).show()
 
-                        val menuCourse = findViewById<Button>(R.id.btnCourse)
-                        menuCourse.setOnClickListener {
                             val intent = Intent(this , CourseActivity :: class.java)
                             startActivity(intent)
-                        }
 
                     },
                     onError = {

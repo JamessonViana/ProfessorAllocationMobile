@@ -45,11 +45,8 @@ class CreateCourseActivity : AppCompatActivity() {
 
                        Toast.makeText(this, "Curso criado com sucesso!", Toast.LENGTH_SHORT).show()
 
-                        val menuCourse = findViewById<Button>(R.id.btnCourse)
-                        menuCourse.setOnClickListener {
-                            val intent = Intent(this , CourseActivity :: class.java)
-                            startActivity(intent)
-                        }
+                       val intent = Intent(this , CourseActivity :: class.java)
+                       startActivity(intent)
 
                     },
                     onError = {

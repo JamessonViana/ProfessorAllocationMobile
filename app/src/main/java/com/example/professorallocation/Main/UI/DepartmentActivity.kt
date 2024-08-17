@@ -73,7 +73,8 @@ class DepartmentActivity : AppCompatActivity() {
                                 }
                             )
 
-                            buscarDepartamentos()
+                            val intent = Intent(this , DepartmentActivity :: class.java)
+                            startActivity(intent)
                         }
 
                     )

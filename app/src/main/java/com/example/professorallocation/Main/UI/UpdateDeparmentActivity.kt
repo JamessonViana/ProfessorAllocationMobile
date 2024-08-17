@@ -46,11 +46,9 @@ class UpdateDeparmentActivity : AppCompatActivity() {
 
                         Toast.makeText(this, "Departmento alterado com sucesso!", Toast.LENGTH_SHORT).show()
 
-                        val menuDepartment = findViewById<Button>(R.id.btnDepartament)
-                        menuDepartment.setOnClickListener {
                             val intent = Intent(this , DepartmentActivity :: class.java)
                             startActivity(intent)
-                        }
+
 
                     },
                     onError = {
